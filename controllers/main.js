@@ -184,6 +184,8 @@ getEle("createNew").onclick = () => {
   getEle("updatePerson").style.display = "none";
   getEle("addPerson").style.display = "block";
   getEle("type").disabled = false;
+
+  getEle("type").selectedIndex = 0;
   getEle("id").value = "";
   getEle("name").value = "";
   getEle("address").value = "";
@@ -192,11 +194,27 @@ getEle("createNew").onclick = () => {
   getEle("math").value = "";
   getEle("physics").value = "";
   getEle("chemistry").value = "";
+  getEle("mediumScore").value = "";
   getEle("workingDays").value = "";
   getEle("salaryPerDay").value = "";
+  getEle("totalSalary").value = "";
   getEle("company").value = "";
   getEle("invoiceValue").value = "";
   getEle("evaluate").value = "";
+
+  getQuery(".form-group.math").style.display = "block";
+  getQuery(".form-group.physics").style.display = "block";
+  getQuery(".form-group.chemistry").style.display = "block";
+  getQuery(".form-group.mediumScore").style.display = "block";
+  getQuery(".form-group.workingDays").style.display = "none";
+  getQuery(".form-group.salaryPerDay").style.display = "none";
+  getQuery(".form-group.totalSalary").style.display = "none";
+  getQuery(".form-group.company").style.display = "none";
+  getQuery(".form-group.invoiceValue").style.display = "none";
+  getQuery(".form-group.evaluate").style.display = "none";
+  getEle("calculate").style.display = "block";
+  getEle("calculate").innerHTML = "Average Score";
+  getEle("addPerson").innerHTML = "Save and Average Score";
 };
 
 getEle("type").onchange = () => {
